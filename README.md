@@ -1,4 +1,4 @@
-Heroku buildpack: Node.js with grunt support
+Heroku buildpack: Node.js with grunt and bower support
 ============================================
 
 Supported Grunt versions: 0.3 and 0.4.
