@@ -88,6 +88,8 @@ fi
     status "Exporting config vars to environment"
     export_env_dir $env_dir
   fi
+  
+  npm install bower grunt grunt-cli
 
   status "Installing dependencies"
   # Make npm output to STDOUT instead of its default STDERR
