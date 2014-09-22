@@ -36,11 +36,11 @@ Usage
 
 Create a new app with this buildpack:
 
-    heroku create myapp --buildpack https://github.com/abecadel/heroku-buildpack-nodejs-grunt.git
+    heroku create myapp --buildpack https://github.com/abecadel/heroku-buildpack-nodejs-grunt-bower.git
 
 Or add this buildpack to your current app:
 
-    heroku config:add BUILDPACK_URL=https://github.com/abecadel/heroku-buildpack-nodejs-grunt.git
+    heroku config:add BUILDPACK_URL=https://github.com/abecadel/heroku-buildpack-nodejs-grunt-bower.git
     
 Enable heroku `user-env-compile` lab:
     
