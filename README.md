@@ -31,7 +31,7 @@ Here's an overview of what this buildpack does:
 - Runs `bower` if a `bower.json` is found.
 - Runs `grunt` if a Gruntfile (`Gruntfile.js`, `Gruntfile.coffee`or `grunt.js`) is found.
 
-For more technical details, see the [heavily-commented compile script](https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt/blob/master/bin/compile).
+For more technical details, see the [heavily-commented compile script](https://github.com/abecadel/heroku-buildpack-nodejs-grunt-bower/blob/master/bin/compile).
 
 Usage
 -----
