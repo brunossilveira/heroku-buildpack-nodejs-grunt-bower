@@ -94,9 +94,6 @@ fi
   $build_dir/node_modules/.bin/bower install
   npm install
   $build_dir/node_modules/.bin/grunt
-  
-  # Make npm output to STDOUT instead of its default STDERR
-  #npm install --userconfig $build_dir/.npmrc --dev 2>&1 | indent
 )
 
 # Persist goodies like node-version in the slug
