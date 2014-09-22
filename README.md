@@ -4,11 +4,12 @@ Heroku buildpack: Node.js with grunt support
 Supported Grunt versions: 0.3 and 0.4.
 See the Grunt [migration guide](https://github.com/gruntjs/grunt/wiki/Upgrading-from-0.3-to-0.4) if you are upgrading from 0.3.
 
-This is a fork of [Heroku's official Node.js buildpack](https://github.com/heroku/heroku-buildpack-nodejs) with added [Grunt](http://gruntjs.com/) support.
+This is a fork of [Heroku's official Node.js buildpack](https://github.com/heroku/heroku-buildpack-nodejs) with added [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/) support.
 Using this buildpack you do not need to commit the results of your Grunt tasks (e.g. minification and concatination of files), keeping your repository clean.
 
 After all the default Node.js and npm build tasks have finished, the buildpack checks if a Gruntfile (`Gruntfile.js`, `Gruntfile.coffee`or `grunt.js`) exists and executes the `heroku` task by running `grunt heroku`. For details about grunt and how to define tasks, check out the [offical documentation](http://gruntjs.com/getting-started). You must add grunt to the npm dependencies in your `package.json` file.
 If no Gruntfile exists, the buildpacks simply skips the grunt step and executes like the standard Node.js buildpack.
+If bower.json file exist bower install command will be executed.
 
 
 How it Works
@@ -27,6 +28,7 @@ Here's an overview of what this buildpack does:
 - Runs `npm rebuild` if `node_modules` is checked into version control.
 - Always runs `npm install` (with devDependencies) to ensure [npm script hooks](https://npmjs.org/doc/misc/npm-scripts.html) are executed.
 - Always runs `npm prune` after restoring cached modules to ensure cleanup of unused dependencies.
+- Runs `bower` if a `bower.json` is found.
 - Runs `grunt` if a Gruntfile (`Gruntfile.js`, `Gruntfile.coffee`or `grunt.js`) is found.
 
 For more technical details, see the [heavily-commented compile script](https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt/blob/master/bin/compile).
