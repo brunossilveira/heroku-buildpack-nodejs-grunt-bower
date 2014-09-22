@@ -91,7 +91,7 @@ fi
   
   npm install bower grunt grunt-cli
   status "Installing dependencies"
-  bower install
+  $build_dir/node_modules/.bin/bower install
   npm install
   
   # Make npm output to STDOUT instead of its default STDERR
