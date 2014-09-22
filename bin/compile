@@ -90,8 +90,10 @@ fi
   fi
   
   npm install bower grunt grunt-cli
-
   status "Installing dependencies"
+  bower install
+  npm install
+  
   # Make npm output to STDOUT instead of its default STDERR
   npm install --userconfig $build_dir/.npmrc --dev 2>&1 | indent
 )
