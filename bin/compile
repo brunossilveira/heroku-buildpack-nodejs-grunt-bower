@@ -93,7 +93,7 @@ fi
   status "Installing dependencies"
   $build_dir/node_modules/.bin/bower install
   npm install
-  $build_dir/node_modules/.bin/grunt
+  $build_dir/node_modules/.bin/grunt heroku:$NODE_ENV
 )
 
 # Persist goodies like node-version in the slug
