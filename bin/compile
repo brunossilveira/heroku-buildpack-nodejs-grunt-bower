@@ -5,7 +5,7 @@ set -o pipefail   # don't ignore exit codes when piping output
 # set -x          # enable debugging
 
 # Configure directories
-build_dir=$1
+build_dir="$1/client"
 cache_dir=$2
 env_dir=$3
 
@@ -88,7 +88,7 @@ fi
     status "Exporting config vars to environment"
     export_env_dir $env_dir
   fi
-  
+
   npm install bower grunt grunt-cli
   status "Installing dependencies"
   $build_dir/node_modules/.bin/bower install
